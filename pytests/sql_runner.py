@@ -27,14 +27,14 @@ class SQLRunner:
     def execute_insert_file(self):
         file = open("./insert.sql", 'r')
         sql = file.read()
-        table_values = self.cursor.execute(sql)
+        table_values = self.cursor.executescript(sql)
         file.close()
         return table_values
 
     def execute_update_file(self):
         file = open("./update.sql", 'r')
         sql = file.read()
-        updated = self.cursor.execute(sql)
+        updated = self.cursor.executescript(sql)
         file.close()
         return updated
 
