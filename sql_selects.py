@@ -17,4 +17,4 @@ def select_all_planets_with_moons_and_mass_less_than_one():
     return "SELECT * FROM planets WHERE num_of_moons > 0 AND mass < 1"
 
 def select_name_and_color_of_all_blue_planets():
-    return "SELECT * FROM planets WHERE color LIKE "%blue%""
+    return "SELECT name, color FROM planets WHERE color LIKE '%blue%'"

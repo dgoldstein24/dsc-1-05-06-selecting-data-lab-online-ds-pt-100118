@@ -46,7 +46,7 @@ def test_insert_into():
     sql_runner = SQLRunner()
     table = sql_runner.execute_alter_file()
     table_values = sql_runner.execute_insert_file()
-    test = table_values.executescript("SELECT * FROM planets").fetchall()
+    test = table_values.execute("SELECT * FROM planets").fetchall()
 
     assert len(test) == 9
 
